@@ -1,6 +1,6 @@
 # Prefix to Namespace extension for Visual Studio Code
 
-This is the README for your extension "ttl-prefix-generator". After writing up a brief description, we recommend including the following sections.
+Extension to get namespaces from well known prefixes from the [prefix.cc](http://prefix.cc) project.
 
 ## Features
 

@@ -1,66 +1,59 @@
+/* eslint-disable curly */
 import * as vscode from 'vscode';
 
-import {prefixes} from './prefixes';
+import * as RDF from "./static/22-rdf-syntax-ns.json";
+import * as RDFS from "./static/rdf-schema.json";
+import * as OWL from "./static/owl.json";
+import * as DCTERMS from "./static/dublin_core_terms.json";
+import * as DC from "./static/dublin_core_elements.json";
+import * as SDO from "./static/schemaorg-current-https.json";
+import * as RICO from "./static/RiC-O_v0-2.json";
+import * as SHACL from "./static/shacl.json";
+import { VocabularyParser } from './VocabularyParser';
+import { Prefix } from './Prefix';
+
+const prefix_cc = new Prefix();
+
+const documentSelectors =  ['turtle', 'trig'];
 
 export function activate(context: vscode.ExtensionContext) {
 	
 	console.log('Congratulations, your extension "ttl-prefix-generator" is now active!');
 
-	let prefixGetter = vscode.commands.registerCommand('prefix.fetch', () => {
-		if (!vscode.workspace) {
-			return vscode.window.showErrorMessage('Please open a project folder first');
-		}
-		const editor = vscode.window.activeTextEditor;
-		if (!editor) {
-			return;
-		}
+	context.subscriptions.push(
+		getPrefixDeclarationCommand(),
+		vscode.languages.registerCompletionItemProvider(documentSelectors, prefix_cc.getCompleteItems(), '@'),
+		vscode.languages.registerCompletionItemProvider(documentSelectors, (new VocabularyParser(['sdo', 'schema'], SDO)).getCompleteItems(), ':'),
+		vscode.languages.registerCompletionItemProvider(documentSelectors, (new VocabularyParser(['rico'], RICO)).getCompleteItems(), ':'),
+		vscode.languages.registerCompletionItemProvider(documentSelectors, (new VocabularyParser(['rdf'], RDF)).getCompleteItems(), ':'),
+		vscode.languages.registerCompletionItemProvider(documentSelectors, (new VocabularyParser(['rdfs'], RDFS)).getCompleteItems(), ':'),
+		vscode.languages.registerCompletionItemProvider(documentSelectors, (new VocabularyParser(['shacl'], SHACL)).getCompleteItems(), ':'),
+		vscode.languages.registerCompletionItemProvider(documentSelectors, (new VocabularyParser(['owl'], OWL)).getCompleteItems(), ':'),
+		vscode.languages.registerCompletionItemProvider(documentSelectors, (new VocabularyParser(['dc'], DC)).getCompleteItems(), ':'),
+		vscode.languages.registerCompletionItemProvider(documentSelectors, (new VocabularyParser(['dcterms'], DCTERMS)).getCompleteItems(), ':')
+	);
+}
 
-		if (editor.selection) {
-			return makenamespace(editor.document.getText(editor.selection));
-		}
+function getPrefixDeclarationCommand()
+{
+	return vscode.commands.registerCommand('prefix.fetch', () => {
+		if (!vscode.workspace) return vscode.window.showErrorMessage('Please open a project folder first');
+		if (!vscode.window.activeTextEditor) return;
 
 		vscode.window.showInputBox({
 			value: 'rdf',
 			placeHolder: `For example: rdf`,
 
-		}).then(prefix => prefix ? makenamespace(prefix) : null);
+		}).then(prefix => prefix ? writePrefixDeclaration(prefix) : null);
 	});
-
-	let autoComplete = vscode.languages.registerCompletionItemProvider(
-		['turtle', 'trig'],
-		{
-			provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
-				const completeOptions = [];
-				for (let prefix in prefixes) {
-					const ns = prefixes[<keyof typeof prefixes>prefix];
-					const item = new vscode.CompletionItem(prefix, vscode.CompletionItemKind.Method);
-					item.detail = ns ;
-					item.insertText = getPrefixDecleration(prefix, '') + "\n";
-					completeOptions.push(item);
-				}
-				return completeOptions;
-			}
-		}, 
-		'@');
-		
-	context.subscriptions.push(prefixGetter, autoComplete);
-	
 }
 
-function getPrefixDecleration(prefix: string, prepend: string = '@'): string | undefined
-{
-	if (prefix in prefixes) {
-		return `${prepend}prefix ${prefix}: <${prefixes[<keyof typeof prefixes>prefix]}> .`;
-	}
-}
-
-function makenamespace(prefix: string) {
+function writePrefixDeclaration(prefix: string) {
 	const editor = vscode.window.activeTextEditor;
-
-	if (prefix in prefixes) {
+	if (prefix_cc.hasPrefix(prefix)) {
 		const selection = editor!.selection;
 		editor!.edit(editBuilder => {
-			editBuilder.replace(selection, getPrefixDecleration(prefix)!);
+			editBuilder.replace(selection, prefix_cc.getDeclaration(prefix, '@', '\n'));
 		});
 	} else {
 		vscode.window.showErrorMessage(`No namespace for prefix '${prefix}' was found.`);

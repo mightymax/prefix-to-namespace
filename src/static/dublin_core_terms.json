@@ -1,0 +1,1682 @@
+{
+  "@graph" : [ {
+    "@id" : "http://purl.org/dc/terms/",
+    "modified" : "2012-06-14",
+    "publisher" : "http://purl.org/dc/aboutdcmi#DCMI",
+    "title" : {
+      "@language" : "en",
+      "@value" : "DCMI Metadata Terms - other"
+    }
+  }, {
+    "@id" : "dcterms:Agent",
+    "@type" : "rdfs:Class",
+    "issued" : "2008-01-14",
+    "rdf:type" : {
+      "@id" : "dcterms:AgentClass"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A resource that acts or has the power to act."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Agent"
+    }
+  }, {
+    "@id" : "dcterms:AgentClass",
+    "@type" : "rdfs:Class",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A group of agents."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Agent Class"
+    },
+    "subClassOf" : "rdfs:Class"
+  }, {
+    "@id" : "dcterms:BibliographicResource",
+    "@type" : "rdfs:Class",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A book, article, or other documentary resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Bibliographic Resource"
+    }
+  }, {
+    "@id" : "dcterms:Box",
+    "@type" : "rdfs:Datatype",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of regions in space defined by their geographic coordinates according to the DCMI Box Encoding Scheme."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "DCMI Box"
+    },
+    "seeAlso" : "https://www.dublincore.org/specifications/dublin-core/dcmi-box/"
+  }, {
+    "@id" : "dcterms:DCMIType",
+    "@type" : "dcam:VocabularyEncodingScheme",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of classes specified by the DCMI Type Vocabulary, used to categorize the nature or genre of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "DCMI Type Vocabulary"
+    },
+    "seeAlso" : "http://purl.org/dc/dcmitype/"
+  }, {
+    "@id" : "dcterms:DDC",
+    "@type" : "dcam:VocabularyEncodingScheme",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of conceptual resources specified by the Dewey Decimal Classification."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "DDC"
+    },
+    "seeAlso" : "http://www.oclc.org/dewey/"
+  }, {
+    "@id" : "dcterms:FileFormat",
+    "@type" : "rdfs:Class",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A digital resource format."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "File Format"
+    },
+    "subClassOf" : "dcterms:MediaType"
+  }, {
+    "@id" : "dcterms:Frequency",
+    "@type" : "rdfs:Class",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A rate at which something recurs."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Frequency"
+    }
+  }, {
+    "@id" : "dcterms:IMT",
+    "@type" : "dcam:VocabularyEncodingScheme",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of media types specified by the Internet Assigned Numbers Authority."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "IMT"
+    },
+    "seeAlso" : "http://www.iana.org/assignments/media-types/"
+  }, {
+    "@id" : "dcterms:ISO3166",
+    "@type" : "rdfs:Datatype",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of codes listed in ISO 3166-1 for the representation of names of countries."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "ISO 3166"
+    },
+    "seeAlso" : "https://www.iso.org/obp/ui/#search"
+  }, {
+    "@id" : "dcterms:ISO639-2",
+    "@type" : "rdfs:Datatype",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The three-letter alphabetic codes listed in ISO639-2 for the representation of names of languages."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "ISO 639-2"
+    },
+    "seeAlso" : "http://lcweb.loc.gov/standards/iso639-2/langhome.html"
+  }, {
+    "@id" : "dcterms:ISO639-3",
+    "@type" : "rdfs:Datatype",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of three-letter codes listed in ISO 639-3 for the representation of names of languages."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "ISO 639-3"
+    },
+    "seeAlso" : "http://www.sil.org/iso639-3/"
+  }, {
+    "@id" : "dcterms:Jurisdiction",
+    "@type" : "rdfs:Class",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The extent or range of judicial, law enforcement, or other authority."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Jurisdiction"
+    },
+    "subClassOf" : "dcterms:LocationPeriodOrJurisdiction"
+  }, {
+    "@id" : "dcterms:LCC",
+    "@type" : "dcam:VocabularyEncodingScheme",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of conceptual resources specified by the Library of Congress Classification."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "LCC"
+    },
+    "seeAlso" : "http://lcweb.loc.gov/catdir/cpso/lcco/lcco.html"
+  }, {
+    "@id" : "dcterms:LCSH",
+    "@type" : "dcam:VocabularyEncodingScheme",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of labeled concepts specified by the Library of Congress Subject Headings."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "LCSH"
+    }
+  }, {
+    "@id" : "dcterms:LicenseDocument",
+    "@type" : "rdfs:Class",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A legal document giving official permission to do something with a resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "License Document"
+    },
+    "subClassOf" : "dcterms:RightsStatement"
+  }, {
+    "@id" : "dcterms:LinguisticSystem",
+    "@type" : "rdfs:Class",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Written, spoken, sign, and computer languages are linguistic systems."
+    },
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A system of signs, symbols, sounds, gestures, or rules used in communication."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Linguistic System"
+    }
+  }, {
+    "@id" : "dcterms:Location",
+    "@type" : "rdfs:Class",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A spatial region or named place."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Location"
+    },
+    "subClassOf" : "dcterms:LocationPeriodOrJurisdiction"
+  }, {
+    "@id" : "dcterms:LocationPeriodOrJurisdiction",
+    "@type" : "rdfs:Class",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A location, period of time, or jurisdiction."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Location, Period, or Jurisdiction"
+    }
+  }, {
+    "@id" : "dcterms:MESH",
+    "@type" : "dcam:VocabularyEncodingScheme",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of labeled concepts specified by the Medical Subject Headings."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "MeSH"
+    },
+    "seeAlso" : "http://www.nlm.nih.gov/mesh/meshhome.html"
+  }, {
+    "@id" : "dcterms:MediaType",
+    "@type" : "rdfs:Class",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A file format or physical medium."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Media Type"
+    },
+    "subClassOf" : "dcterms:MediaTypeOrExtent"
+  }, {
+    "@id" : "dcterms:MediaTypeOrExtent",
+    "@type" : "rdfs:Class",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A media type or extent."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Media Type or Extent"
+    }
+  }, {
+    "@id" : "dcterms:MethodOfAccrual",
+    "@type" : "rdfs:Class",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A method by which resources are added to a collection."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Method of Accrual"
+    }
+  }, {
+    "@id" : "dcterms:MethodOfInstruction",
+    "@type" : "rdfs:Class",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A process that is used to engender knowledge, attitudes, and skills."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Method of Instruction"
+    }
+  }, {
+    "@id" : "dcterms:NLM",
+    "@type" : "dcam:VocabularyEncodingScheme",
+    "issued" : "2005-06-13",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of conceptual resources specified by the National Library of Medicine Classification."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "NLM"
+    },
+    "seeAlso" : "http://wwwcf.nlm.nih.gov/class/"
+  }, {
+    "@id" : "dcterms:Period",
+    "@type" : "rdfs:Datatype",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of time intervals defined by their limits according to the DCMI Period Encoding Scheme."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "DCMI Period"
+    },
+    "seeAlso" : "https://www.dublincore.org/specifications/dublin-core/dcmi-period/"
+  }, {
+    "@id" : "dcterms:PeriodOfTime",
+    "@type" : "rdfs:Class",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An interval of time that is named or defined by its start and end dates."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Period of Time"
+    },
+    "subClassOf" : "dcterms:LocationPeriodOrJurisdiction"
+  }, {
+    "@id" : "dcterms:PhysicalMedium",
+    "@type" : "rdfs:Class",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Examples include paper, canvas, or DVD."
+    },
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A physical material or carrier."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Physical Medium"
+    },
+    "subClassOf" : "dcterms:MediaType"
+  }, {
+    "@id" : "dcterms:PhysicalResource",
+    "@type" : "rdfs:Class",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A material thing."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Physical Resource"
+    }
+  }, {
+    "@id" : "dcterms:Point",
+    "@type" : "rdfs:Datatype",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of points in space defined by their geographic coordinates according to the DCMI Point Encoding Scheme."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "DCMI Point"
+    },
+    "seeAlso" : "https://www.dublincore.org/specifications/dublin-core/dcmi-point/"
+  }, {
+    "@id" : "dcterms:Policy",
+    "@type" : "rdfs:Class",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Policy"
+    }
+  }, {
+    "@id" : "dcterms:ProvenanceStatement",
+    "@type" : "rdfs:Class",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Provenance Statement"
+    }
+  }, {
+    "@id" : "dcterms:RFC1766",
+    "@type" : "rdfs:Datatype",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of tags, constructed according to RFC 1766, for the identification of languages."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "RFC 1766"
+    },
+    "seeAlso" : "http://www.ietf.org/rfc/rfc1766.txt"
+  }, {
+    "@id" : "dcterms:RFC3066",
+    "@type" : "rdfs:Datatype",
+    "description" : {
+      "@language" : "en",
+      "@value" : "RFC 3066 has been obsoleted by RFC 4646."
+    },
+    "issued" : "2002-07-13",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of tags constructed according to RFC 3066 for the identification of languages."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "RFC 3066"
+    },
+    "seeAlso" : "http://www.ietf.org/rfc/rfc3066.txt"
+  }, {
+    "@id" : "dcterms:RFC4646",
+    "@type" : "rdfs:Datatype",
+    "description" : {
+      "@language" : "en",
+      "@value" : "RFC 4646 obsoletes RFC 3066."
+    },
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of tags constructed according to RFC 4646 for the identification of languages."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "RFC 4646"
+    },
+    "seeAlso" : "http://www.ietf.org/rfc/rfc4646.txt"
+  }, {
+    "@id" : "dcterms:RFC5646",
+    "@type" : "rdfs:Datatype",
+    "description" : {
+      "@language" : "en",
+      "@value" : "RFC 5646 obsoletes RFC 4646."
+    },
+    "issued" : "2010-10-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of tags constructed according to RFC 5646 for the identification of languages."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "RFC 5646"
+    },
+    "seeAlso" : "http://www.ietf.org/rfc/rfc5646.txt"
+  }, {
+    "@id" : "dcterms:RightsStatement",
+    "@type" : "rdfs:Class",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Rights Statement"
+    }
+  }, {
+    "@id" : "dcterms:SizeOrDuration",
+    "@type" : "rdfs:Class",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Examples include a number of pages, a specification of length, width, and breadth, or a period in hours, minutes, and seconds."
+    },
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A dimension or extent, or a time taken to play or execute."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Size or Duration"
+    },
+    "subClassOf" : "dcterms:MediaTypeOrExtent"
+  }, {
+    "@id" : "dcterms:Standard",
+    "@type" : "rdfs:Class",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A reference point against which other things can be evaluated or compared."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Standard"
+    }
+  }, {
+    "@id" : "dcterms:TGN",
+    "@type" : "dcam:VocabularyEncodingScheme",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of places specified by the Getty Thesaurus of Geographic Names."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "TGN"
+    },
+    "seeAlso" : "http://www.getty.edu/research/tools/vocabulary/tgn/index.html"
+  }, {
+    "@id" : "dcterms:UDC",
+    "@type" : "dcam:VocabularyEncodingScheme",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of conceptual resources specified by the Universal Decimal Classification."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "UDC"
+    },
+    "seeAlso" : "http://www.udcc.org/"
+  }, {
+    "@id" : "dcterms:URI",
+    "@type" : "rdfs:Datatype",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of identifiers constructed according to the generic syntax for Uniform Resource Identifiers as specified by the Internet Engineering Task Force."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "URI"
+    },
+    "seeAlso" : "http://www.ietf.org/rfc/rfc3986.txt"
+  }, {
+    "@id" : "dcterms:W3CDTF",
+    "@type" : "rdfs:Datatype",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The set of dates and times constructed according to the W3C Date and Time Formats Specification."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "W3C-DTF"
+    },
+    "seeAlso" : "http://www.w3.org/TR/NOTE-datetime"
+  }, {
+    "@id" : "dcterms:abstract",
+    "@type" : "rdf:Property",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A summary of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Abstract"
+    },
+    "subPropertyOf" : [ "dcterms:description", "http://purl.org/dc/elements/1.1/description" ]
+  }, {
+    "@id" : "dcterms:accessRights",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:RightsStatement",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Access Rights may include information regarding access or restrictions based on privacy, security, or other policies."
+    },
+    "issued" : "2003-02-15",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Information about who access the resource or an indication of its security status."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Access Rights"
+    },
+    "subPropertyOf" : [ "dcterms:rights", "http://purl.org/dc/elements/1.1/rights" ]
+  }, {
+    "@id" : "dcterms:accrualMethod",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:MethodOfAccrual",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to use a value from the Collection Description Accrual Method Vocabulary [[DCMI-ACCRUALMETHOD](https://dublincore.org/groups/collections/accrual-method/)]."
+    },
+    "issued" : "2005-06-13",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The method by which items are added to a collection."
+    },
+    "domain" : "http://purl.org/dc/dcmitype/Collection",
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Accrual Method"
+    }
+  }, {
+    "@id" : "dcterms:accrualPeriodicity",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:Frequency",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to use a value from the Collection Description Frequency Vocabulary [[DCMI-COLLFREQ](https://dublincore.org/groups/collections/frequency/)]."
+    },
+    "issued" : "2005-06-13",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The frequency with which items are added to a collection."
+    },
+    "domain" : "http://purl.org/dc/dcmitype/Collection",
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Accrual Periodicity"
+    }
+  }, {
+    "@id" : "dcterms:accrualPolicy",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:Policy",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to use a value from the Collection Description Accrual Policy Vocabulary [[DCMI-ACCRUALPOLICY](https://dublincore.org/groups/collections/accrual-policy/)]."
+    },
+    "issued" : "2005-06-13",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The policy governing the addition of items to a collection."
+    },
+    "domain" : "http://purl.org/dc/dcmitype/Collection",
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Accrual Policy"
+    }
+  }, {
+    "@id" : "dcterms:alternative",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "The distinction between titles and alternative titles is application-specific."
+    },
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An alternative name for the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Alternative Title"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : [ "dcterms:title", "http://purl.org/dc/elements/1.1/title" ]
+  }, {
+    "@id" : "dcterms:audience",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:AgentClass",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to use this property with non-literal values from a vocabulary of audience types."
+    },
+    "issued" : "2001-05-21",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A class of agents for whom the resource is intended or useful."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Audience"
+    }
+  }, {
+    "@id" : "dcterms:available",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."
+    },
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Date that the resource became or will become available."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Date Available"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : [ "dcterms:date", "http://purl.org/dc/elements/1.1/date" ]
+  }, {
+    "@id" : "dcterms:bibliographicCitation",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible."
+    },
+    "issued" : "2003-02-15",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A bibliographic reference for the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Bibliographic Citation"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : [ "dcterms:identifier", "http://purl.org/dc/elements/1.1/identifier" ]
+  }, {
+    "@id" : "dcterms:conformsTo",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:Standard",
+    "issued" : "2001-05-21",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An established standard to which the described resource conforms."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Conforms To"
+    },
+    "subPropertyOf" : [ "dcterms:relation", "http://purl.org/dc/elements/1.1/relation" ]
+  }, {
+    "@id" : "dcterms:contributor",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:Agent",
+    "description" : {
+      "@language" : "en",
+      "@value" : "The guidelines for using names of persons or organizations as creators apply to contributors."
+    },
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An entity responsible for making contributions to the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Contributor"
+    },
+    "subPropertyOf" : "http://purl.org/dc/elements/1.1/contributor"
+  }, {
+    "@id" : "dcterms:coverage",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : [ "dcterms:Location", "dcterms:Period", "dcterms:Jurisdiction" ],
+    "description" : {
+      "@language" : "en",
+      "@value" : "Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges.  Because coverage is so broadly defined, it is preferable to use the more specific subproperties Temporal Coverage and Spatial Coverage."
+    },
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Coverage"
+    },
+    "subPropertyOf" : "http://purl.org/dc/elements/1.1/coverage"
+  }, {
+    "@id" : "dcterms:created",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."
+    },
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Date of creation of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Date Created"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : [ "dcterms:date", "http://purl.org/dc/elements/1.1/date" ]
+  }, {
+    "@id" : "dcterms:creator",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:Agent",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to identify the creator with a URI.  If this is not possible or feasible, a literal value that identifies the creator may be provided."
+    },
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An entity responsible for making the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Creator"
+    },
+    "subPropertyOf" : [ "dcterms:contributor", "http://purl.org/dc/elements/1.1/creator" ],
+    "equivalentProperty" : "http://xmlns.com/foaf/0.1/maker"
+  }, {
+    "@id" : "dcterms:date",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Date may be used to express temporal information at any level of granularity.  Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [[ISO 8601-1](https://www.iso.org/iso-8601-date-and-time-format.html)] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [[W3CDTF](https://www.w3.org/TR/NOTE-datetime)] or the Extended Date/Time Format Specification [[EDTF](http://www.loc.gov/standards/datetime/)].  If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a '/' (slash) character.  Either the start or end date may be missing."
+    },
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A point or period of time associated with an event in the lifecycle of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Date"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : "http://purl.org/dc/elements/1.1/date"
+  }, {
+    "@id" : "dcterms:dateAccepted",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a date of acceptance may be relevant are a thesis (accepted by a university department) or an article (accepted by a journal)."
+    },
+    "issued" : "2002-07-13",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Date of acceptance of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Date Accepted"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : [ "dcterms:date", "http://purl.org/dc/elements/1.1/date" ]
+  }, {
+    "@id" : "dcterms:dateCopyrighted",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Typically a year.  Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."
+    },
+    "issued" : "2002-07-13",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Date of copyright of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Date Copyrighted"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : [ "dcterms:date", "http://purl.org/dc/elements/1.1/date" ]
+  }, {
+    "@id" : "dcterms:dateSubmitted",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a 'Date Submitted' may be relevant include a thesis (submitted to a university department) or an article (submitted to a journal)."
+    },
+    "issued" : "2002-07-13",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Date of submission of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Date Submitted"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : [ "dcterms:date", "http://purl.org/dc/elements/1.1/date" ]
+  }, {
+    "@id" : "dcterms:description",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."
+    },
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An account of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Description"
+    },
+    "subPropertyOf" : "http://purl.org/dc/elements/1.1/description"
+  }, {
+    "@id" : "dcterms:educationLevel",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:AgentClass",
+    "issued" : "2002-07-13",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A class of agents, defined in terms of progression through an educational or training context, for which the described resource is intended."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Audience Education Level"
+    },
+    "subPropertyOf" : "dcterms:audience"
+  }, {
+    "@id" : "dcterms:extent",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:SizeOrDuration",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to specify the file size in megabytes and duration in ISO 8601 format."
+    },
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The size or duration of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Extent"
+    },
+    "subPropertyOf" : [ "dcterms:format", "http://purl.org/dc/elements/1.1/format" ]
+  }, {
+    "@id" : "dcterms:format",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : [ "dcterms:MediaType", "dcterms:Extent" ],
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration."
+    },
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The file format, physical medium, or dimensions of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Format"
+    },
+    "subPropertyOf" : "http://purl.org/dc/elements/1.1/format"
+  }, {
+    "@id" : "dcterms:hasFormat",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "This property is intended to be used with non-literal values. This property is an inverse property of Is Format Of."
+    },
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A related resource that is substantially the same as the pre-existing described resource, but in another format."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Has Format"
+    },
+    "subPropertyOf" : [ "dcterms:relation", "http://purl.org/dc/elements/1.1/relation" ]
+  }, {
+    "@id" : "dcterms:hasPart",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "This property is intended to be used with non-literal values. This property is an inverse property of Is Part Of."
+    },
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A related resource that is included either physically or logically in the described resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Has Part"
+    },
+    "subPropertyOf" : [ "dcterms:relation", "http://purl.org/dc/elements/1.1/relation" ]
+  }, {
+    "@id" : "dcterms:hasVersion",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Changes in version imply substantive changes in content rather than differences in format. This property is intended to be used with non-literal values. This property is an inverse property of Is Version Of."
+    },
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A related resource that is a version, edition, or adaptation of the described resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Has Version"
+    },
+    "subPropertyOf" : [ "dcterms:relation", "http://purl.org/dc/elements/1.1/relation" ]
+  }, {
+    "@id" : "dcterms:identifier",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).  Persistent identifiers should be provided as HTTP URIs."
+    },
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An unambiguous reference to the resource within a given context."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Identifier"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : "http://purl.org/dc/elements/1.1/identifier"
+  }, {
+    "@id" : "dcterms:instructionalMethod",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:MethodOfInstruction",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Instructional Method typically includes ways of presenting instructional materials or conducting instructional activities, patterns of learner-to-learner and learner-to-instructor interactions, and mechanisms by which group and individual levels of learning are measured.  Instructional methods include all aspects of the instruction and learning processes from planning and implementation through evaluation and feedback."
+    },
+    "issued" : "2005-06-13",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A process, used to engender knowledge, attitudes and skills, that the described resource is designed to support."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Instructional Method"
+    }
+  }, {
+    "@id" : "dcterms:isFormatOf",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "This property is intended to be used with non-literal values. This property is an inverse property of Has Format."
+    },
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A pre-existing related resource that is substantially the same as the described resource, but in another format."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Is Format Of"
+    },
+    "subPropertyOf" : [ "dcterms:relation", "http://purl.org/dc/elements/1.1/relation" ]
+  }, {
+    "@id" : "dcterms:isPartOf",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "This property is intended to be used with non-literal values. This property is an inverse property of Has Part."
+    },
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A related resource in which the described resource is physically or logically included."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Is Part Of"
+    },
+    "subPropertyOf" : [ "dcterms:relation", "http://purl.org/dc/elements/1.1/relation" ]
+  }, {
+    "@id" : "dcterms:isReferencedBy",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "This property is intended to be used with non-literal values. This property is an inverse property of References."
+    },
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A related resource that references, cites, or otherwise points to the described resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Is Referenced By"
+    },
+    "subPropertyOf" : [ "dcterms:relation", "http://purl.org/dc/elements/1.1/relation" ]
+  }, {
+    "@id" : "dcterms:isReplacedBy",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "This property is intended to be used with non-literal values. This property is an inverse property of Replaces."
+    },
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A related resource that supplants, displaces, or supersedes the described resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Is Replaced By"
+    },
+    "subPropertyOf" : [ "dcterms:relation", "http://purl.org/dc/elements/1.1/relation" ]
+  }, {
+    "@id" : "dcterms:isRequiredBy",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "This property is intended to be used with non-literal values. This property is an inverse property of Requires."
+    },
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A related resource that requires the described resource to support its function, delivery, or coherence."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Is Required By"
+    },
+    "subPropertyOf" : [ "dcterms:relation", "http://purl.org/dc/elements/1.1/relation" ]
+  }, {
+    "@id" : "dcterms:isVersionOf",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Changes in version imply substantive changes in content rather than differences in format. This property is intended to be used with non-literal values. This property is an inverse property of Has Version."
+    },
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A related resource of which the described resource is a version, edition, or adaptation."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Is Version Of"
+    },
+    "subPropertyOf" : [ "dcterms:relation", "http://purl.org/dc/elements/1.1/relation" ]
+  }, {
+    "@id" : "dcterms:issued",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."
+    },
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Date of formal issuance of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Date Issued"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : [ "dcterms:date", "http://purl.org/dc/elements/1.1/date" ]
+  }, {
+    "@id" : "dcterms:language",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:LinguisticSystem",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag."
+    },
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A language of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Language"
+    },
+    "subPropertyOf" : "http://purl.org/dc/elements/1.1/language"
+  }, {
+    "@id" : "dcterms:license",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:LicenseDocument",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided."
+    },
+    "issued" : "2004-06-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A legal document giving official permission to do something with the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "License"
+    },
+    "subPropertyOf" : [ "dcterms:rights", "http://purl.org/dc/elements/1.1/rights" ]
+  }, {
+    "@id" : "dcterms:mediator",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:AgentClass",
+    "description" : {
+      "@language" : "en",
+      "@value" : "In an educational context, a mediator might be a parent, teacher, teaching assistant, or care-giver."
+    },
+    "issued" : "2001-05-21",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An entity that mediates access to the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Mediator"
+    },
+    "subPropertyOf" : "dcterms:audience"
+  }, {
+    "@id" : "dcterms:medium",
+    "@type" : "rdf:Property",
+    "domainIncludes" : "dcterms:PhysicalResource",
+    "rangeIncludes" : "dcterms:PhysicalMedium",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The material or physical carrier of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Medium"
+    },
+    "subPropertyOf" : [ "dcterms:format", "http://purl.org/dc/elements/1.1/format" ]
+  }, {
+    "@id" : "dcterms:modified",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."
+    },
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Date on which the resource was changed."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Date Modified"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : [ "dcterms:date", "http://purl.org/dc/elements/1.1/date" ]
+  }, {
+    "@id" : "dcterms:provenance",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:ProvenanceStatement",
+    "description" : {
+      "@language" : "en",
+      "@value" : "The statement may include a description of any changes successive custodians made to the resource."
+    },
+    "issued" : "2004-09-20",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Provenance"
+    }
+  }, {
+    "@id" : "dcterms:publisher",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:Agent",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An entity responsible for making the resource available."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Publisher"
+    },
+    "subPropertyOf" : "http://purl.org/dc/elements/1.1/publisher"
+  }, {
+    "@id" : "dcterms:references",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "This property is intended to be used with non-literal values. This property is an inverse property of Is Referenced By."
+    },
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A related resource that is referenced, cited, or otherwise pointed to by the described resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "References"
+    },
+    "subPropertyOf" : [ "dcterms:relation", "http://purl.org/dc/elements/1.1/relation" ]
+  }, {
+    "@id" : "dcterms:relation",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to identify the related resource by means of a URI.  If this is not possible or feasible, a string conforming to a formal identification system may be provided."
+    },
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A related resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Relation"
+    },
+    "subPropertyOf" : "http://purl.org/dc/elements/1.1/relation"
+  }, {
+    "@id" : "dcterms:replaces",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "This property is intended to be used with non-literal values. This property is an inverse property of Is Replaced By."
+    },
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A related resource that is supplanted, displaced, or superseded by the described resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Replaces"
+    },
+    "subPropertyOf" : [ "dcterms:relation", "http://purl.org/dc/elements/1.1/relation" ]
+  }, {
+    "@id" : "dcterms:requires",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "This property is intended to be used with non-literal values. This property is an inverse property of Is Required By."
+    },
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A related resource that is required by the described resource to support its function, delivery, or coherence."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Requires"
+    },
+    "subPropertyOf" : [ "dcterms:relation", "http://purl.org/dc/elements/1.1/relation" ]
+  }, {
+    "@id" : "dcterms:rights",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:RightsStatement",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.  Recommended practice is to refer to a rights statement with a URI.  If this is not possible or feasible, a literal value (name, label, or short text) may be provided."
+    },
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Information about rights held in and over the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Rights"
+    },
+    "subPropertyOf" : "http://purl.org/dc/elements/1.1/rights"
+  }, {
+    "@id" : "dcterms:rightsHolder",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:Agent",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to refer to the rights holder with a URI. If this is not possible or feasible, a literal value that identifies the rights holder may be provided."
+    },
+    "issued" : "2004-06-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A person or organization owning or managing rights over the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Rights Holder"
+    }
+  }, {
+    "@id" : "dcterms:source",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "This property is intended to be used with non-literal values. The described resource may be derived from the related resource in whole or in part. Best practice is to identify the related resource by means of a URI or a string conforming to a formal identification system."
+    },
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A related resource from which the described resource is derived."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Source"
+    },
+    "subPropertyOf" : [ "dcterms:relation", "http://purl.org/dc/elements/1.1/source" ]
+  }, {
+    "@id" : "dcterms:spatial",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:Location",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Spatial characteristics of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Spatial Coverage"
+    },
+    "subPropertyOf" : [ "dcterms:coverage", "http://purl.org/dc/elements/1.1/coverage" ]
+  }, {
+    "@id" : "dcterms:subject",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to refer to the subject with a URI. If this is not possible or feasible, a literal value that identifies the subject may be provided. Both should preferably refer to a subject in a controlled vocabulary."
+    },
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A topic of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Subject"
+    },
+    "subPropertyOf" : "http://purl.org/dc/elements/1.1/subject"
+  }, {
+    "@id" : "dcterms:tableOfContents",
+    "@type" : "rdf:Property",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A list of subunits of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Table Of Contents"
+    },
+    "subPropertyOf" : [ "dcterms:description", "http://purl.org/dc/elements/1.1/description" ]
+  }, {
+    "@id" : "dcterms:temporal",
+    "@type" : "rdf:Property",
+    "rangeIncludes" : "dcterms:PeriodOfTime",
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Temporal characteristics of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Temporal Coverage"
+    },
+    "subPropertyOf" : [ "dcterms:coverage", "http://purl.org/dc/elements/1.1/coverage" ]
+  }, {
+    "@id" : "dcterms:title",
+    "@type" : "rdf:Property",
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A name given to the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Title"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : "http://purl.org/dc/elements/1.1/title"
+  }, {
+    "@id" : "dcterms:type",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the property Format."
+    },
+    "issued" : "2008-01-14",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The nature or genre of the resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Type"
+    },
+    "subPropertyOf" : "http://purl.org/dc/elements/1.1/type"
+  }, {
+    "@id" : "dcterms:valid",
+    "@type" : "rdf:Property",
+    "description" : {
+      "@language" : "en",
+      "@value" : "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."
+    },
+    "issued" : "2000-07-11",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Date (often a range) of validity of a resource."
+    },
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Date Valid"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : [ "dcterms:date", "http://purl.org/dc/elements/1.1/date" ]
+  } ],
+  "@context" : {
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "rangeIncludes" : {
+      "@id" : "http://purl.org/dc/dcam/rangeIncludes",
+      "@type" : "@id"
+    },
+    "domainIncludes" : {
+      "@id" : "http://purl.org/dc/dcam/domainIncludes",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@type" : "@id"
+    },
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+      "@type" : "@id"
+    },
+    "equivalentProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#equivalentProperty",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/terms/publisher",
+      "@type" : "@id"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "dcam" : "http://purl.org/dc/dcam/",
+    "skos" : "http://www.w3.org/2004/02/skos/core#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dcterms" : "http://purl.org/dc/terms/"
+  }
+}

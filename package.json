@@ -4,6 +4,7 @@
   "description": "Get well kown namespaces based on their prefix using data from prefix.cc.",
   "version": "0.0.1",
   "license": "EUPL-1.2",
+  "repository": "github:mightymax/prefix-to-namespace",
   "engines": {
     "vscode": "^1.69.0"
   },
@@ -11,7 +12,7 @@
     "Snippets"
   ],
   "activationEvents": [
-    "*"
+    "onStartupFinished"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -34,6 +35,7 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
+    "@triply/ratt": "^3.4.66",
     "@types/glob": "^7.2.0",
     "@types/mocha": "^9.1.1",
     "@types/node": "16.x",

@@ -1,0 +1,2881 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b4",
+    "namespace" : "http://www.w3.org/ns/shacl#",
+    "prefix" : "sh"
+  }, {
+    "@id" : "http://www.w3.org/ns/shacl#",
+    "@type" : "owl:Ontology",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "This vocabulary defines terms used in SHACL, the W3C Shapes Constraint Language."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "W3C Shapes Constraint Language (SHACL) Vocabulary"
+    },
+    "declare" : "_:b4",
+    "suggestedShapesGraph" : "http://www.w3.org/ns/shacl-shacl#"
+  }, {
+    "@id" : "sh:AbstractResult",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The base class of validation results, typically not instantiated directly."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Abstract result"
+    },
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:AndConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to test whether a value node conforms to all members of a provided list of shapes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "And constraint component"
+    },
+    "parameter" : "sh:AndConstraintComponent-and"
+  }, {
+    "@id" : "sh:AndConstraintComponent-and",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "path" : "sh:and"
+  }, {
+    "@id" : "sh:BlankNode",
+    "rdf:type" : {
+      "@id" : "sh:NodeKind"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The node kind of all blank nodes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Blank node"
+    }
+  }, {
+    "@id" : "sh:BlankNodeOrIRI",
+    "rdf:type" : {
+      "@id" : "sh:NodeKind"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The node kind of all blank nodes or IRIs."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Blank node or IRI"
+    }
+  }, {
+    "@id" : "sh:BlankNodeOrLiteral",
+    "rdf:type" : {
+      "@id" : "sh:NodeKind"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The node kind of all blank nodes or literals."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Blank node or literal"
+    }
+  }, {
+    "@id" : "sh:ClassConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to verify that each value node is an instance of a given type."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Class constraint component"
+    },
+    "parameter" : "sh:ClassConstraintComponent-class"
+  }, {
+    "@id" : "sh:ClassConstraintComponent-class",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "nodeKind" : "sh:IRI",
+    "path" : "sh:class"
+  }, {
+    "@id" : "sh:ClosedConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to indicate that focus nodes must only have values for those properties that have been explicitly enumerated via sh:property/sh:path."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Closed constraint component"
+    },
+    "parameter" : [ "sh:ClosedConstraintComponent-ignoredProperties", "sh:ClosedConstraintComponent-closed" ]
+  }, {
+    "@id" : "sh:ClosedConstraintComponent-closed",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "datatype" : "xsd:boolean",
+    "path" : "sh:closed"
+  }, {
+    "@id" : "sh:ClosedConstraintComponent-ignoredProperties",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "sh:optional" : true,
+    "path" : "sh:ignoredProperties"
+  }, {
+    "@id" : "sh:ConstraintComponent",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of constraint components."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Constraint component"
+    },
+    "subClassOf" : "sh:Parameterizable"
+  }, {
+    "@id" : "sh:DatatypeConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to restrict the datatype of all value nodes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Datatype constraint component"
+    },
+    "parameter" : "sh:DatatypeConstraintComponent-datatype"
+  }, {
+    "@id" : "sh:DatatypeConstraintComponent-datatype",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "sh:maxCount" : 1,
+    "nodeKind" : "sh:IRI",
+    "path" : "sh:datatype"
+  }, {
+    "@id" : "sh:DisjointConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to verify that the set of value nodes is disjoint with the the set of nodes that have the focus node as subject and the value of a given property as predicate."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Disjoint constraint component"
+    },
+    "parameter" : "sh:DisjointConstraintComponent-disjoint"
+  }, {
+    "@id" : "sh:DisjointConstraintComponent-disjoint",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "nodeKind" : "sh:IRI",
+    "path" : "sh:disjoint"
+  }, {
+    "@id" : "sh:EqualsConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to verify that the set of value nodes is equal to the set of nodes that have the focus node as subject and the value of a given property as predicate."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Equals constraint component"
+    },
+    "parameter" : "sh:EqualsConstraintComponent-equals"
+  }, {
+    "@id" : "sh:EqualsConstraintComponent-equals",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "nodeKind" : "sh:IRI",
+    "path" : "sh:equals"
+  }, {
+    "@id" : "sh:ExpressionConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to verify that a given node expression produces true for all value nodes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Expression constraint component"
+    },
+    "parameter" : "sh:ExpressionConstraintComponent-expression"
+  }, {
+    "@id" : "sh:ExpressionConstraintComponent-expression",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "path" : "sh:expression"
+  }, {
+    "@id" : "sh:Function",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of SHACL functions."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Function"
+    },
+    "subClassOf" : "sh:Parameterizable"
+  }, {
+    "@id" : "sh:HasValueConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to verify that one of the value nodes is a given RDF node."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Has-value constraint component"
+    },
+    "parameter" : "sh:HasValueConstraintComponent-hasValue"
+  }, {
+    "@id" : "sh:HasValueConstraintComponent-hasValue",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "path" : "sh:hasValue"
+  }, {
+    "@id" : "sh:IRI",
+    "rdf:type" : {
+      "@id" : "sh:NodeKind"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The node kind of all IRIs."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "IRI"
+    }
+  }, {
+    "@id" : "sh:IRIOrLiteral",
+    "rdf:type" : {
+      "@id" : "sh:NodeKind"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The node kind of all IRIs or literals."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "IRI or literal"
+    }
+  }, {
+    "@id" : "sh:InConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to exclusively enumerate the permitted value nodes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "In constraint component"
+    },
+    "parameter" : "sh:InConstraintComponent-in"
+  }, {
+    "@id" : "sh:InConstraintComponent-in",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "sh:maxCount" : 1,
+    "path" : "sh:in"
+  }, {
+    "@id" : "sh:Info",
+    "rdf:type" : {
+      "@id" : "sh:Severity"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The severity for an informational validation result."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Info"
+    }
+  }, {
+    "@id" : "sh:JSConstraint",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of constraints backed by a JavaScript function."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "JavaScript-based constraint"
+    },
+    "subClassOf" : "sh:JSExecutable"
+  }, {
+    "@id" : "sh:JSConstraint-js",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "path" : "sh:js"
+  }, {
+    "@id" : "sh:JSConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component with the parameter sh:js linking to a sh:JSConstraint containing a sh:script."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "JavaScript constraint component"
+    },
+    "parameter" : "sh:JSConstraint-js"
+  }, {
+    "@id" : "sh:JSExecutable",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Abstract base class of resources that declare an executable JavaScript."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "JavaScript executable"
+    },
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:JSFunction",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of SHACL functions that execute a JavaScript function when called."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "JavaScript function"
+    },
+    "subClassOf" : [ "sh:JSExecutable", "sh:Function" ]
+  }, {
+    "@id" : "sh:JSLibrary",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Represents a JavaScript library, typically identified by one or more URLs of files to include."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "JavaScript library"
+    },
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:JSRule",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of SHACL rules expressed using JavaScript."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "JavaScript rule"
+    },
+    "subClassOf" : [ "sh:Rule", "sh:JSExecutable" ]
+  }, {
+    "@id" : "sh:JSTarget",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of targets that are based on JavaScript functions."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "JavaScript target"
+    },
+    "subClassOf" : [ "sh:JSExecutable", "sh:Target" ]
+  }, {
+    "@id" : "sh:JSTargetType",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The (meta) class for parameterizable targets that are based on JavaScript functions."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "JavaScript target type"
+    },
+    "subClassOf" : [ "sh:JSExecutable", "sh:TargetType" ]
+  }, {
+    "@id" : "sh:JSValidator",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A SHACL validator based on JavaScript. This can be used to declare SHACL constraint components that perform JavaScript-based validation when used."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "JavaScript validator"
+    },
+    "subClassOf" : [ "sh:Validator", "sh:JSExecutable" ]
+  }, {
+    "@id" : "sh:LanguageInConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to enumerate language tags that all value nodes must have."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Language-in constraint component"
+    },
+    "parameter" : "sh:LanguageInConstraintComponent-languageIn"
+  }, {
+    "@id" : "sh:LanguageInConstraintComponent-languageIn",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "sh:maxCount" : 1,
+    "path" : "sh:languageIn"
+  }, {
+    "@id" : "sh:LessThanConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to verify that each value node is smaller than all the nodes that have the focus node as subject and the value of a given property as predicate."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Less-than constraint component"
+    },
+    "parameter" : "sh:LessThanConstraintComponent-lessThan"
+  }, {
+    "@id" : "sh:LessThanConstraintComponent-lessThan",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "nodeKind" : "sh:IRI",
+    "path" : "sh:lessThan"
+  }, {
+    "@id" : "sh:LessThanOrEqualsConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to verify that every value node is smaller than all the nodes that have the focus node as subject and the value of a given property as predicate."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "less-than-or-equals constraint component"
+    },
+    "parameter" : "sh:LessThanOrEqualsConstraintComponent-lessThanOrEquals"
+  }, {
+    "@id" : "sh:LessThanOrEqualsConstraintComponent-lessThanOrEquals",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "nodeKind" : "sh:IRI",
+    "path" : "sh:lessThanOrEquals"
+  }, {
+    "@id" : "sh:Literal",
+    "rdf:type" : {
+      "@id" : "sh:NodeKind"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The node kind of all literals."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Literal"
+    }
+  }, {
+    "@id" : "sh:MaxCountConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to restrict the maximum number of value nodes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Max-count constraint component"
+    },
+    "parameter" : "sh:MaxCountConstraintComponent-maxCount"
+  }, {
+    "@id" : "sh:MaxCountConstraintComponent-maxCount",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "datatype" : "xsd:integer",
+    "sh:maxCount" : 1,
+    "path" : "sh:maxCount"
+  }, {
+    "@id" : "sh:MaxExclusiveConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to restrict the range of value nodes with a maximum exclusive value."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Max-exclusive constraint component"
+    },
+    "parameter" : "sh:MaxExclusiveConstraintComponent-maxExclusive"
+  }, {
+    "@id" : "sh:MaxExclusiveConstraintComponent-maxExclusive",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "sh:maxCount" : 1,
+    "nodeKind" : "sh:Literal",
+    "path" : "sh:maxExclusive"
+  }, {
+    "@id" : "sh:MaxInclusiveConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to restrict the range of value nodes with a maximum inclusive value."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Max-inclusive constraint component"
+    },
+    "parameter" : "sh:MaxInclusiveConstraintComponent-maxInclusive"
+  }, {
+    "@id" : "sh:MaxInclusiveConstraintComponent-maxInclusive",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "sh:maxCount" : 1,
+    "nodeKind" : "sh:Literal",
+    "path" : "sh:maxInclusive"
+  }, {
+    "@id" : "sh:MaxLengthConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to restrict the maximum string length of value nodes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Max-length constraint component"
+    },
+    "parameter" : "sh:MaxLengthConstraintComponent-maxLength"
+  }, {
+    "@id" : "sh:MaxLengthConstraintComponent-maxLength",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "datatype" : "xsd:integer",
+    "sh:maxCount" : 1,
+    "path" : "sh:maxLength"
+  }, {
+    "@id" : "sh:MinCountConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to restrict the minimum number of value nodes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Min-count constraint component"
+    },
+    "parameter" : "sh:MinCountConstraintComponent-minCount"
+  }, {
+    "@id" : "sh:MinCountConstraintComponent-minCount",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "datatype" : "xsd:integer",
+    "sh:maxCount" : 1,
+    "path" : "sh:minCount"
+  }, {
+    "@id" : "sh:MinExclusiveConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to restrict the range of value nodes with a minimum exclusive value."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Min-exclusive constraint component"
+    },
+    "parameter" : "sh:MinExclusiveConstraintComponent-minExclusive"
+  }, {
+    "@id" : "sh:MinExclusiveConstraintComponent-minExclusive",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "sh:maxCount" : 1,
+    "nodeKind" : "sh:Literal",
+    "path" : "sh:minExclusive"
+  }, {
+    "@id" : "sh:MinInclusiveConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to restrict the range of value nodes with a minimum inclusive value."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Min-inclusive constraint component"
+    },
+    "parameter" : "sh:MinInclusiveConstraintComponent-minInclusive"
+  }, {
+    "@id" : "sh:MinInclusiveConstraintComponent-minInclusive",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "sh:maxCount" : 1,
+    "nodeKind" : "sh:Literal",
+    "path" : "sh:minInclusive"
+  }, {
+    "@id" : "sh:MinLengthConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to restrict the minimum string length of value nodes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Min-length constraint component"
+    },
+    "parameter" : "sh:MinLengthConstraintComponent-minLength"
+  }, {
+    "@id" : "sh:MinLengthConstraintComponent-minLength",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "datatype" : "xsd:integer",
+    "sh:maxCount" : 1,
+    "path" : "sh:minLength"
+  }, {
+    "@id" : "sh:NodeConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to verify that all value nodes conform to the given node shape."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Node constraint component"
+    },
+    "parameter" : "sh:NodeConstraintComponent-node"
+  }, {
+    "@id" : "sh:NodeConstraintComponent-node",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "path" : "sh:node"
+  }, {
+    "@id" : "sh:NodeKind",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of all node kinds, including sh:BlankNode, sh:IRI, sh:Literal or the combinations of these: sh:BlankNodeOrIRI, sh:BlankNodeOrLiteral, sh:IRIOrLiteral."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Node kind"
+    },
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:NodeKindConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to restrict the RDF node kind of each value node."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Node-kind constraint component"
+    },
+    "parameter" : "sh:NodeKindConstraintComponent-nodeKind"
+  }, {
+    "@id" : "sh:NodeKindConstraintComponent-nodeKind",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "in" : {
+      "@list" : [ "sh:BlankNode", "sh:IRI", "sh:Literal", "sh:BlankNodeOrIRI", "sh:BlankNodeOrLiteral", "sh:IRIOrLiteral" ]
+    },
+    "sh:maxCount" : 1,
+    "path" : "sh:nodeKind"
+  }, {
+    "@id" : "sh:NodeShape",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A node shape is a shape that specifies constraint that need to be met with respect to focus nodes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Node shape"
+    },
+    "subClassOf" : "sh:Shape"
+  }, {
+    "@id" : "sh:NotConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to verify that value nodes do not conform to a given shape."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Not constraint component"
+    },
+    "parameter" : "sh:NotConstraintComponent-not"
+  }, {
+    "@id" : "sh:NotConstraintComponent-not",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "path" : "sh:not"
+  }, {
+    "@id" : "sh:OrConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to restrict the value nodes so that they conform to at least one out of several provided shapes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Or constraint component"
+    },
+    "parameter" : "sh:OrConstraintComponent-or"
+  }, {
+    "@id" : "sh:OrConstraintComponent-or",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "path" : "sh:or"
+  }, {
+    "@id" : "sh:Parameter",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of parameter declarations, consisting of a path predicate and (possibly) information about allowed value type, cardinality and other characteristics."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Parameter"
+    },
+    "subClassOf" : "sh:PropertyShape"
+  }, {
+    "@id" : "sh:Parameterizable",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Superclass of components that can take parameters, especially functions and constraint components."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Parameterizable"
+    },
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:PatternConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to verify that every value node matches a given regular expression."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Pattern constraint component"
+    },
+    "parameter" : [ "sh:PatternConstraintComponent-flags", "sh:PatternConstraintComponent-pattern" ]
+  }, {
+    "@id" : "sh:PatternConstraintComponent-flags",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "datatype" : "xsd:string",
+    "sh:optional" : true,
+    "path" : "sh:flags"
+  }, {
+    "@id" : "sh:PatternConstraintComponent-pattern",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "datatype" : "xsd:string",
+    "path" : "sh:pattern"
+  }, {
+    "@id" : "sh:PrefixDeclaration",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of prefix declarations, consisting of pairs of a prefix with a namespace."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Prefix declaration"
+    },
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:PropertyConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to verify that all value nodes conform to the given property shape."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Property constraint component"
+    },
+    "parameter" : "sh:PropertyConstraintComponent-property"
+  }, {
+    "@id" : "sh:PropertyConstraintComponent-property",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "path" : "sh:property"
+  }, {
+    "@id" : "sh:PropertyGroup",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Instances of this class represent groups of property shapes that belong together."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Property group"
+    },
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:PropertyShape",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A property shape is a shape that specifies constraints on the values of a focus node for a given property or path."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Property shape"
+    },
+    "subClassOf" : "sh:Shape"
+  }, {
+    "@id" : "sh:QualifiedMaxCountConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to verify that a specified maximum number of value nodes conforms to a given shape."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Qualified-max-count constraint component"
+    },
+    "parameter" : [ "sh:QualifiedMaxCountConstraintComponent-qualifiedValueShapesDisjoint", "sh:QualifiedMaxCountConstraintComponent-qualifiedValueShape", "sh:QualifiedMaxCountConstraintComponent-qualifiedMaxCount" ]
+  }, {
+    "@id" : "sh:QualifiedMaxCountConstraintComponent-qualifiedMaxCount",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "datatype" : "xsd:integer",
+    "path" : "sh:qualifiedMaxCount"
+  }, {
+    "@id" : "sh:QualifiedMaxCountConstraintComponent-qualifiedValueShape",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "path" : "sh:qualifiedValueShape"
+  }, {
+    "@id" : "sh:QualifiedMaxCountConstraintComponent-qualifiedValueShapesDisjoint",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "datatype" : "xsd:boolean",
+    "sh:optional" : true,
+    "path" : "sh:qualifiedValueShapesDisjoint"
+  }, {
+    "@id" : "sh:QualifiedMinCountConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to verify that a specified minimum number of value nodes conforms to a given shape."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Qualified-min-count constraint component"
+    },
+    "parameter" : [ "sh:QualifiedMinCountConstraintComponent-qualifiedValueShapesDisjoint", "sh:QualifiedMinCountConstraintComponent-qualifiedValueShape", "sh:QualifiedMinCountConstraintComponent-qualifiedMinCount" ]
+  }, {
+    "@id" : "sh:QualifiedMinCountConstraintComponent-qualifiedMinCount",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "datatype" : "xsd:integer",
+    "path" : "sh:qualifiedMinCount"
+  }, {
+    "@id" : "sh:QualifiedMinCountConstraintComponent-qualifiedValueShape",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "path" : "sh:qualifiedValueShape"
+  }, {
+    "@id" : "sh:QualifiedMinCountConstraintComponent-qualifiedValueShapesDisjoint",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "datatype" : "xsd:boolean",
+    "sh:optional" : true,
+    "path" : "sh:qualifiedValueShapesDisjoint"
+  }, {
+    "@id" : "sh:ResultAnnotation",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A class of result annotations, which define the rules to derive the values of a given annotation property as extra values for a validation result."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Result annotation"
+    },
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:Rule",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of SHACL rules. Never instantiated directly."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Rule"
+    },
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:SPARQLAskExecutable",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of SPARQL executables that are based on an ASK query."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "SPARQL ASK executable"
+    },
+    "subClassOf" : "sh:SPARQLExecutable"
+  }, {
+    "@id" : "sh:SPARQLAskValidator",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of validators based on SPARQL ASK queries. The queries are evaluated for each value node and are supposed to return true if the given node conforms."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "SPARQL ASK validator"
+    },
+    "subClassOf" : [ "sh:SPARQLAskExecutable", "sh:Validator" ]
+  }, {
+    "@id" : "sh:SPARQLConstraint",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of constraints based on SPARQL SELECT queries."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "SPARQL constraint"
+    },
+    "subClassOf" : "sh:SPARQLSelectExecutable"
+  }, {
+    "@id" : "sh:SPARQLConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to define constraints based on SPARQL queries."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "SPARQL constraint component"
+    },
+    "parameter" : "sh:SPARQLConstraintComponent-sparql"
+  }, {
+    "@id" : "sh:SPARQLConstraintComponent-sparql",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "path" : "sh:sparql"
+  }, {
+    "@id" : "sh:SPARQLConstructExecutable",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of SPARQL executables that are based on a CONSTRUCT query."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "SPARQL CONSTRUCT executable"
+    },
+    "subClassOf" : "sh:SPARQLExecutable"
+  }, {
+    "@id" : "sh:SPARQLExecutable",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of resources that encapsulate a SPARQL query."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "SPARQL executable"
+    },
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:SPARQLFunction",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A function backed by a SPARQL query - either ASK or SELECT."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "SPARQL function"
+    },
+    "subClassOf" : [ "sh:SPARQLSelectExecutable", "sh:SPARQLAskExecutable", "sh:Function" ]
+  }, {
+    "@id" : "sh:SPARQLRule",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of SHACL rules based on SPARQL CONSTRUCT queries."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "SPARQL CONSTRUCT rule"
+    },
+    "subClassOf" : [ "sh:SPARQLConstructExecutable", "sh:Rule" ]
+  }, {
+    "@id" : "sh:SPARQLSelectExecutable",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of SPARQL executables based on a SELECT query."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "SPARQL SELECT executable"
+    },
+    "subClassOf" : "sh:SPARQLExecutable"
+  }, {
+    "@id" : "sh:SPARQLSelectValidator",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of validators based on SPARQL SELECT queries. The queries are evaluated for each focus node and are supposed to produce bindings for all focus nodes that do not conform."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "SPARQL SELECT validator"
+    },
+    "subClassOf" : [ "sh:SPARQLSelectExecutable", "sh:Validator" ]
+  }, {
+    "@id" : "sh:SPARQLTarget",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of targets that are based on SPARQL queries."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "SPARQL target"
+    },
+    "subClassOf" : [ "sh:SPARQLSelectExecutable", "sh:SPARQLAskExecutable", "sh:Target" ]
+  }, {
+    "@id" : "sh:SPARQLTargetType",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The (meta) class for parameterizable targets that are based on SPARQL queries."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "SPARQL target type"
+    },
+    "subClassOf" : [ "sh:SPARQLSelectExecutable", "sh:SPARQLAskExecutable", "sh:TargetType" ]
+  }, {
+    "@id" : "sh:SPARQLUpdateExecutable",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of SPARQL executables based on a SPARQL UPDATE."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "SPARQL UPDATE executable"
+    },
+    "subClassOf" : "sh:SPARQLExecutable"
+  }, {
+    "@id" : "sh:Severity",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of validation result severity levels, including violation and warning levels."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Severity"
+    },
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:Shape",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A shape is a collection of constraints that may be targeted for certain nodes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Shape"
+    },
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:Target",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The base class of targets such as those based on SPARQL queries."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Target"
+    },
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:TargetType",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The (meta) class for parameterizable targets.\tInstances of this are instantiated as values of the sh:target property."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Target type"
+    },
+    "subClassOf" : [ "sh:Parameterizable", "rdfs:Class" ]
+  }, {
+    "@id" : "sh:TripleRule",
+    "@type" : "rdfs:Class",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "A rule based on triple (subject, predicate, object) pattern."
+    },
+    "subClassOf" : "sh:Rule"
+  }, {
+    "@id" : "sh:UniqueLangConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to specify that no pair of value nodes may use the same language tag."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Unique-languages constraint component"
+    },
+    "parameter" : "sh:UniqueLangConstraintComponent-uniqueLang"
+  }, {
+    "@id" : "sh:UniqueLangConstraintComponent-uniqueLang",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "datatype" : "xsd:boolean",
+    "sh:maxCount" : 1,
+    "path" : "sh:uniqueLang"
+  }, {
+    "@id" : "sh:ValidationReport",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of SHACL validation reports."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Validation report"
+    },
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:ValidationResult",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of validation results."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Validation result"
+    },
+    "subClassOf" : "sh:AbstractResult"
+  }, {
+    "@id" : "sh:Validator",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The class of validators, which provide instructions on how to process a constraint definition. This class serves as base class for the SPARQL-based validators and other possible implementations."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Validator"
+    },
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:Violation",
+    "rdf:type" : {
+      "@id" : "sh:Severity"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The severity for a violation validation result."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Violation"
+    }
+  }, {
+    "@id" : "sh:Warning",
+    "rdf:type" : {
+      "@id" : "sh:Severity"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The severity for a warning validation result."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Warning"
+    }
+  }, {
+    "@id" : "sh:XoneConstraintComponent",
+    "rdf:type" : {
+      "@id" : "sh:ConstraintComponent"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A constraint component that can be used to restrict the value nodes so that they conform to exactly one out of several provided shapes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Exactly one constraint component"
+    },
+    "parameter" : "sh:XoneConstraintComponent-xone"
+  }, {
+    "@id" : "sh:XoneConstraintComponent-xone",
+    "rdf:type" : {
+      "@id" : "sh:Parameter"
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "path" : "sh:xone"
+  }, {
+    "@id" : "sh:alternativePath",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The (single) value of this property must be a list of path elements, representing the elements of alternative paths."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "alternative path"
+    },
+    "range" : "rdf:List"
+  }, {
+    "@id" : "sh:and",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "RDF list of shapes to validate the value nodes against."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "and"
+    },
+    "range" : "rdf:List"
+  }, {
+    "@id" : "sh:annotationProperty",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The annotation property that shall be set."
+    },
+    "domain" : "sh:ResultAnnotation",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "annotation property"
+    },
+    "range" : "rdf:Property"
+  }, {
+    "@id" : "sh:annotationValue",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The (default) values of the annotation property."
+    },
+    "domain" : "sh:ResultAnnotation",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "annotation value"
+    }
+  }, {
+    "@id" : "sh:annotationVarName",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The name of the SPARQL variable from the SELECT clause that shall be used for the values."
+    },
+    "domain" : "sh:ResultAnnotation",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "annotation variable name"
+    },
+    "range" : "xsd:string"
+  }, {
+    "@id" : "sh:ask",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The SPARQL ASK query to execute."
+    },
+    "domain" : "sh:SPARQLAskExecutable",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "ask"
+    },
+    "range" : "xsd:string"
+  }, {
+    "@id" : "sh:class",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The type that all value nodes must have."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "class"
+    },
+    "range" : "rdfs:Class"
+  }, {
+    "@id" : "sh:closed",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "If set to true then the shape is closed."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "closed"
+    },
+    "range" : "xsd:boolean"
+  }, {
+    "@id" : "sh:condition",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The shapes that the focus nodes need to conform to before a rule is executed on them."
+    },
+    "domain" : "sh:Rule",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "condition"
+    },
+    "range" : "sh:Shape"
+  }, {
+    "@id" : "sh:conforms",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "True if the validation did not produce any validation results, and false otherwise."
+    },
+    "domain" : "sh:ValidationReport",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "conforms"
+    },
+    "range" : "xsd:boolean"
+  }, {
+    "@id" : "sh:construct",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The SPARQL CONSTRUCT query to execute."
+    },
+    "domain" : "sh:SPARQLConstructExecutable",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "construct"
+    },
+    "range" : "xsd:string"
+  }, {
+    "@id" : "sh:datatype",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies an RDF datatype that all value nodes must have."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "datatype"
+    },
+    "range" : "rdfs:Datatype"
+  }, {
+    "@id" : "sh:deactivated",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "If set to true then all nodes conform to this."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "deactivated"
+    },
+    "range" : "xsd:boolean"
+  }, {
+    "@id" : "sh:declare",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Links a resource with its namespace prefix declarations."
+    },
+    "domain" : "owl:Ontology",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "declare"
+    },
+    "range" : "sh:PrefixDeclaration"
+  }, {
+    "@id" : "sh:defaultValue",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A default value for a property, for example for user interface tools to pre-populate input fields."
+    },
+    "domain" : "sh:PropertyShape",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "default value"
+    }
+  }, {
+    "@id" : "sh:description",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Human-readable descriptions for the property in the context of the surrounding shape."
+    },
+    "domain" : "sh:PropertyShape",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "description"
+    }
+  }, {
+    "@id" : "sh:detail",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Links a result with other results that provide more details, for example to describe violations against nested shapes."
+    },
+    "domain" : "sh:AbstractResult",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "detail"
+    },
+    "range" : "sh:AbstractResult"
+  }, {
+    "@id" : "sh:disjoint",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies a property where the set of values must be disjoint with the value nodes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "disjoint"
+    },
+    "range" : "rdf:Property"
+  }, {
+    "@id" : "sh:entailment",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An entailment regime that indicates what kind of inferencing is required by a shapes graph."
+    },
+    "domain" : "owl:Ontology",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "entailment"
+    },
+    "range" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:equals",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies a property that must have the same values as the value nodes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "equals"
+    },
+    "range" : "rdf:Property"
+  }, {
+    "@id" : "sh:expression",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The node expression that must return true for the value nodes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "expression"
+    }
+  }, {
+    "@id" : "sh:filterShape",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The shape that all input nodes of the expression need to conform to."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "filter shape"
+    },
+    "range" : "sh:Shape"
+  }, {
+    "@id" : "sh:flags",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An optional flag to be used with regular expression pattern matching."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "flags"
+    },
+    "range" : "xsd:string"
+  }, {
+    "@id" : "sh:focusNode",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The focus node that was validated when the result was produced."
+    },
+    "domain" : "sh:AbstractResult",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "focus node"
+    }
+  }, {
+    "@id" : "sh:group",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Can be used to link to a property group to indicate that a property shape belongs to a group of related property shapes."
+    },
+    "domain" : "sh:PropertyShape",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "group"
+    },
+    "range" : "sh:PropertyGroup"
+  }, {
+    "@id" : "sh:hasValue",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies a value that must be among the value nodes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "has value"
+    }
+  }, {
+    "@id" : "sh:ignoredProperties",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An optional RDF list of properties that are also permitted in addition to those explicitly enumerated via sh:property/sh:path."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "ignored properties"
+    },
+    "range" : "rdf:List"
+  }, {
+    "@id" : "sh:in",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies a list of allowed values so that each value node must be among the members of the given list."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "in"
+    },
+    "range" : "rdf:List"
+  }, {
+    "@id" : "in:tersection",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A list of node expressions that shall be intersected."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "intersection"
+    }
+  }, {
+    "@id" : "in:versePath",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The (single) value of this property represents an inverse path (object to subject)."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "inverse path"
+    },
+    "range" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:js",
+    "@type" : "rdf:Property",
+    "comment" : "Constraints expressed in JavaScript.",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "JavaScript constraint"
+    },
+    "range" : "sh:JSConstraint"
+  }, {
+    "@id" : "sh:jsFunctionName",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The name of the JavaScript function to execute."
+    },
+    "domain" : "sh:JSExecutable",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "JavaScript function name"
+    },
+    "range" : "xsd:string"
+  }, {
+    "@id" : "sh:jsLibrary",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Declares which JavaScript libraries are needed to execute this."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "JavaScript library"
+    },
+    "range" : "sh:JSLibrary"
+  }, {
+    "@id" : "sh:jsLibraryURL",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Declares the URLs of a JavaScript library. This should be the absolute URL of a JavaScript file. Implementations may redirect those to local files."
+    },
+    "domain" : "sh:JSLibrary",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "JavaScript library URL"
+    },
+    "range" : "xsd:anyURI"
+  }, {
+    "@id" : "sh:labelTemplate",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Outlines how human-readable labels of instances of the associated Parameterizable shall be produced. The values can contain {?paramName} as placeholders for the actual values of the given parameter."
+    },
+    "domain" : "sh:Parameterizable",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "label template"
+    }
+  }, {
+    "@id" : "sh:languageIn",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies a list of language tags that all value nodes must have."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "language in"
+    },
+    "range" : "rdf:List"
+  }, {
+    "@id" : "sh:lessThan",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies a property that must have smaller values than the value nodes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "less than"
+    },
+    "range" : "rdf:Property"
+  }, {
+    "@id" : "sh:lessThanOrEquals",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies a property that must have smaller or equal values than the value nodes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "less than or equals"
+    },
+    "range" : "rdf:Property"
+  }, {
+    "@id" : "sh:maxCount",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies the maximum number of values in the set of value nodes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "max count"
+    },
+    "range" : "xsd:integer"
+  }, {
+    "@id" : "sh:maxExclusive",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies the maximum exclusive value of each value node."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "max exclusive"
+    }
+  }, {
+    "@id" : "sh:maxInclusive",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies the maximum inclusive value of each value node."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "max inclusive"
+    }
+  }, {
+    "@id" : "sh:maxLength",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies the maximum string length of each value node."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "max length"
+    },
+    "range" : "xsd:integer"
+  }, {
+    "@id" : "sh:message",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A human-readable message (possibly with placeholders for variables) explaining the cause of the result."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "message"
+    }
+  }, {
+    "@id" : "sh:minCount",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies the minimum number of values in the set of value nodes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "min count"
+    },
+    "range" : "xsd:integer"
+  }, {
+    "@id" : "sh:minExclusive",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies the minimum exclusive value of each value node."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "min exclusive"
+    }
+  }, {
+    "@id" : "sh:minInclusive",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies the minimum inclusive value of each value node."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "min inclusive"
+    }
+  }, {
+    "@id" : "sh:minLength",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies the minimum string length of each value node."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "min length"
+    },
+    "range" : "xsd:integer"
+  }, {
+    "@id" : "sh:name",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Human-readable labels for the property in the context of the surrounding shape."
+    },
+    "domain" : "sh:PropertyShape",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "name"
+    }
+  }, {
+    "@id" : "sh:namespace",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The namespace associated with a prefix in a prefix declaration."
+    },
+    "domain" : "sh:PrefixDeclaration",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "namespace"
+    },
+    "range" : "xsd:anyURI"
+  }, {
+    "@id" : "sh:node",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies the node shape that all value nodes must conform to."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "node"
+    },
+    "range" : "sh:NodeShape"
+  }, {
+    "@id" : "sh:nodeKind",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies the node kind (e.g. IRI or literal) each value node."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "node kind"
+    },
+    "range" : "sh:NodeKind"
+  }, {
+    "@id" : "sh:nodeValidator",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The validator(s) used to evaluate a constraint in the context of a node shape."
+    },
+    "domain" : "sh:ConstraintComponent",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "shape validator"
+    },
+    "range" : "sh:Validator"
+  }, {
+    "@id" : "sh:nodes",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The node expression producing the input nodes of a filter shape expression."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "nodes"
+    }
+  }, {
+    "@id" : "sh:not",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies a shape that the value nodes must not conform to."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "not"
+    },
+    "range" : "sh:Shape"
+  }, {
+    "@id" : "sh:object",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An expression producing the nodes that shall be inferred as objects."
+    },
+    "domain" : "sh:TripleRule",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "object"
+    }
+  }, {
+    "@id" : "sh:oneOrMorePath",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The (single) value of this property represents a path that is matched one or more times."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "one or more path"
+    },
+    "range" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:optional",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Indicates whether a parameter is optional."
+    },
+    "domain" : "sh:Parameter",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "optional"
+    },
+    "range" : "xsd:boolean"
+  }, {
+    "@id" : "sh:or",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies a list of shapes so that the value nodes must conform to at least one of the shapes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "or"
+    },
+    "range" : "rdf:List"
+  }, {
+    "@id" : "sh:order",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies the relative order of this compared to its siblings. For example use 0 for the first, 1 for the second."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "order"
+    }
+  }, {
+    "@id" : "sh:parameter",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The parameters of a function or constraint component."
+    },
+    "domain" : "sh:Parameterizable",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "parameter"
+    },
+    "range" : "sh:Parameter"
+  }, {
+    "@id" : "sh:path",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies the property path of a property shape."
+    },
+    "domain" : "sh:PropertyShape",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "path"
+    },
+    "range" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:pattern",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies a regular expression pattern that the string representations of the value nodes must match."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "pattern"
+    },
+    "range" : "xsd:string"
+  }, {
+    "@id" : "sh:predicate",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An expression producing the properties that shall be inferred as predicates."
+    },
+    "domain" : "sh:TripleRule",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "predicate"
+    }
+  }, {
+    "@id" : "sh:prefix",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The prefix of a prefix declaration."
+    },
+    "domain" : "sh:PrefixDeclaration",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "prefix"
+    },
+    "range" : "xsd:string"
+  }, {
+    "@id" : "prefix:es",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The prefixes that shall be applied before parsing the associated SPARQL query."
+    },
+    "domain" : "sh:SPARQLExecutable",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "prefixes"
+    },
+    "range" : "owl:Ontology"
+  }, {
+    "@id" : "sh:property",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Links a shape to its property shapes."
+    },
+    "domain" : "sh:Shape",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "property"
+    },
+    "range" : "sh:PropertyShape"
+  }, {
+    "@id" : "sh:propertyValidator",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The validator(s) used to evaluate a constraint in the context of a property shape."
+    },
+    "domain" : "sh:ConstraintComponent",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "property validator"
+    },
+    "range" : "sh:Validator"
+  }, {
+    "@id" : "sh:qualifiedMaxCount",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The maximum number of value nodes that can conform to the shape."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "qualified max count"
+    },
+    "range" : "xsd:integer"
+  }, {
+    "@id" : "sh:qualifiedMinCount",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The minimum number of value nodes that must conform to the shape."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "qualified min count"
+    },
+    "range" : "xsd:integer"
+  }, {
+    "@id" : "sh:qualifiedValueShape",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The shape that a specified number of values must conform to."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "qualified value shape"
+    },
+    "range" : "sh:Shape"
+  }, {
+    "@id" : "sh:qualifiedValueShapesDisjoint",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Can be used to mark the qualified value shape to be disjoint with its sibling shapes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "qualified value shapes disjoint"
+    },
+    "range" : "xsd:boolean"
+  }, {
+    "@id" : "sh:result",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The validation results contained in a validation report."
+    },
+    "domain" : "sh:ValidationReport",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "result"
+    },
+    "range" : "sh:ValidationResult"
+  }, {
+    "@id" : "sh:resultAnnotation",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Links a SPARQL validator with zero or more sh:ResultAnnotation instances, defining how to derive additional result properties based on the variables of the SELECT query."
+    },
+    "domain" : "sh:SPARQLSelectValidator",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "result annotation"
+    },
+    "range" : "sh:ResultAnnotation"
+  }, {
+    "@id" : "sh:resultMessage",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Human-readable messages explaining the cause of the result."
+    },
+    "domain" : "sh:AbstractResult",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "result message"
+    }
+  }, {
+    "@id" : "sh:resultPath",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The path of a validation result, based on the path of the validated property shape."
+    },
+    "domain" : "sh:AbstractResult",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "result path"
+    },
+    "range" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:resultSeverity",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The severity of the result, e.g. warning."
+    },
+    "domain" : "sh:AbstractResult",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "result severity"
+    },
+    "range" : "sh:Severity"
+  }, {
+    "@id" : "sh:returnType",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The expected type of values returned by the associated function."
+    },
+    "domain" : "sh:Function",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "return type"
+    },
+    "range" : "rdfs:Class"
+  }, {
+    "@id" : "sh:rule",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The rules linked to a shape."
+    },
+    "domain" : "sh:Shape",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "rule"
+    },
+    "range" : "sh:Rule"
+  }, {
+    "@id" : "sh:select",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The SPARQL SELECT query to execute."
+    },
+    "domain" : "sh:SPARQLSelectExecutable",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "select"
+    },
+    "range" : "xsd:string"
+  }, {
+    "@id" : "sh:severity",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Defines the severity that validation results produced by a shape must have. Defaults to sh:Violation."
+    },
+    "domain" : "sh:Shape",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "severity"
+    },
+    "range" : "sh:Severity"
+  }, {
+    "@id" : "sh:shapesGraph",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Shapes graphs that should be used when validating this data graph."
+    },
+    "domain" : "owl:Ontology",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "shapes graph"
+    },
+    "range" : "owl:Ontology"
+  }, {
+    "@id" : "sh:shapesGraphWellFormed",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "If true then the validation engine was certain that the shapes graph has passed all SHACL syntax requirements during the validation process."
+    },
+    "domain" : "sh:ValidationReport",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "shapes graph well-formed"
+    },
+    "range" : "xsd:boolean"
+  }, {
+    "@id" : "sh:sourceConstraint",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The constraint that was validated when the result was produced."
+    },
+    "domain" : "sh:AbstractResult",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "source constraint"
+    }
+  }, {
+    "@id" : "sh:sourceConstraintComponent",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The constraint component that is the source of the result."
+    },
+    "domain" : "sh:AbstractResult",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "source constraint component"
+    },
+    "range" : "sh:ConstraintComponent"
+  }, {
+    "@id" : "sh:sourceShape",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The shape that is was validated when the result was produced."
+    },
+    "domain" : "sh:AbstractResult",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "source shape"
+    },
+    "range" : "sh:Shape"
+  }, {
+    "@id" : "sh:sparql",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Links a shape with SPARQL constraints."
+    },
+    "domain" : "sh:Shape",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "constraint (in SPARQL)"
+    },
+    "range" : "sh:SPARQLConstraint"
+  }, {
+    "@id" : "sh:subject",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An expression producing the resources that shall be inferred as subjects."
+    },
+    "domain" : "sh:TripleRule",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "subject"
+    }
+  }, {
+    "@id" : "sh:suggestedShapesGraph",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Suggested shapes graphs for this ontology. The values of this property may be used in the absence of specific sh:shapesGraph statements."
+    },
+    "domain" : "owl:Ontology",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "suggested shapes graph"
+    },
+    "range" : "owl:Ontology"
+  }, {
+    "@id" : "sh:target",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Links a shape to a target specified by an extension language, for example instances of sh:SPARQLTarget."
+    },
+    "domain" : "sh:Shape",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "target"
+    },
+    "range" : "sh:Target"
+  }, {
+    "@id" : "sh:targetClass",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Links a shape to a class, indicating that all instances of the class must conform to the shape."
+    },
+    "domain" : "sh:Shape",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "target class"
+    },
+    "range" : "rdfs:Class"
+  }, {
+    "@id" : "sh:targetNode",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Links a shape to individual nodes, indicating that these nodes must conform to the shape."
+    },
+    "domain" : "sh:Shape",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "target node"
+    }
+  }, {
+    "@id" : "sh:targetObjectsOf",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Links a shape to a property, indicating that all all objects of triples that have the given property as their predicate must conform to the shape."
+    },
+    "domain" : "sh:Shape",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "target objects of"
+    },
+    "range" : "rdf:Property"
+  }, {
+    "@id" : "sh:targetSubjectsOf",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Links a shape to a property, indicating that all subjects of triples that have the given property as their predicate must conform to the shape."
+    },
+    "domain" : "sh:Shape",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "target subjects of"
+    },
+    "range" : "rdf:Property"
+  }, {
+    "@id" : "sh:this",
+    "@type" : "rdfs:Resource",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A node expression that represents the current focus node."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "this"
+    }
+  }, {
+    "@id" : "sh:union",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A list of node expressions that shall be used together."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "union"
+    }
+  }, {
+    "@id" : "sh:uniqueLang",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies whether all node values must have a unique (or no) language tag."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "unique languages"
+    },
+    "range" : "xsd:boolean"
+  }, {
+    "@id" : "sh:update",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The SPARQL UPDATE to execute."
+    },
+    "domain" : "sh:SPARQLUpdateExecutable",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "update"
+    },
+    "range" : "xsd:string"
+  }, {
+    "@id" : "sh:validator",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The validator(s) used to evaluate constraints of either node or property shapes."
+    },
+    "domain" : "sh:ConstraintComponent",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "validator"
+    },
+    "range" : "sh:Validator"
+  }, {
+    "@id" : "sh:value",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An RDF node that has caused the result."
+    },
+    "domain" : "sh:AbstractResult",
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "value"
+    }
+  }, {
+    "@id" : "sh:xone",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies a list of shapes so that the value nodes must conform to exactly one of the shapes."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "exactly one"
+    },
+    "range" : "rdf:List"
+  }, {
+    "@id" : "sh:zeroOrMorePath",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The (single) value of this property represents a path that is matched zero or more times."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "zero or more path"
+    },
+    "range" : "rdfs:Resource"
+  }, {
+    "@id" : "sh:zeroOrOnePath",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The (single) value of this property represents a path that is matched zero or one times."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/shacl#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "zero or one path"
+    },
+    "range" : "rdfs:Resource"
+  } ],
+  "@context" : {
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+      "@type" : "@id"
+    },
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "path" : {
+      "@id" : "http://www.w3.org/ns/shacl#path",
+      "@type" : "@id"
+    },
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type" : "@id"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "parameter" : {
+      "@id" : "http://www.w3.org/ns/shacl#parameter",
+      "@type" : "@id"
+    },
+    "nodeKind" : {
+      "@id" : "http://www.w3.org/ns/shacl#nodeKind",
+      "@type" : "@id"
+    },
+    "maxCount" : {
+      "@id" : "http://www.w3.org/ns/shacl#maxCount",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "optional" : {
+      "@id" : "http://www.w3.org/ns/shacl#optional",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "datatype" : {
+      "@id" : "http://www.w3.org/ns/shacl#datatype",
+      "@type" : "@id"
+    },
+    "namespace" : {
+      "@id" : "http://www.w3.org/ns/shacl#namespace"
+    },
+    "prefix" : {
+      "@id" : "http://www.w3.org/ns/shacl#prefix"
+    },
+    "in" : {
+      "@id" : "http://www.w3.org/ns/shacl#in",
+      "@type" : "@id"
+    },
+    "suggestedShapesGraph" : {
+      "@id" : "http://www.w3.org/ns/shacl#suggestedShapesGraph",
+      "@type" : "@id"
+    },
+    "declare" : {
+      "@id" : "http://www.w3.org/ns/shacl#declare",
+      "@type" : "@id"
+    },
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "sh" : "http://www.w3.org/ns/shacl#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
+  }
+}

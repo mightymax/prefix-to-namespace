@@ -1,0 +1,171 @@
+{
+  "@graph" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#",
+    "@type" : "owl:Ontology",
+    "title" : "The RDF Schema vocabulary (RDFS)",
+    "seeAlso" : "http://www.w3.org/2000/01/rdf-schema-more"
+  }, {
+    "@id" : "rdfs:Class",
+    "@type" : "rdfs:Class",
+    "comment" : "The class of classes.",
+    "isDefinedBy" : "http://www.w3.org/2000/01/rdf-schema#",
+    "label" : "Class",
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "rdfs:Container",
+    "rdf:type" : {
+      "@id" : "rdfs:Class"
+    },
+    "comment" : "The class of RDF containers.",
+    "isDefinedBy" : "http://www.w3.org/2000/01/rdf-schema#",
+    "label" : "Container",
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "rdfs:ContainerMembershipProperty",
+    "rdf:type" : {
+      "@id" : "rdfs:Class"
+    },
+    "comment" : "The class of container membership properties, rdf:_1, rdf:_2, ...,\n                    all of which are sub-properties of 'member'.",
+    "isDefinedBy" : "http://www.w3.org/2000/01/rdf-schema#",
+    "label" : "ContainerMembershipProperty",
+    "subClassOf" : "rdf:Property"
+  }, {
+    "@id" : "rdfs:Datatype",
+    "rdf:type" : {
+      "@id" : "rdfs:Class"
+    },
+    "comment" : "The class of RDF datatypes.",
+    "isDefinedBy" : "http://www.w3.org/2000/01/rdf-schema#",
+    "label" : "Datatype",
+    "subClassOf" : "rdfs:Class"
+  }, {
+    "@id" : "rdfs:Literal",
+    "rdf:type" : {
+      "@id" : "rdfs:Class"
+    },
+    "comment" : "The class of literal values, eg. textual strings and integers.",
+    "isDefinedBy" : "http://www.w3.org/2000/01/rdf-schema#",
+    "label" : "Literal",
+    "subClassOf" : "rdfs:Resource"
+  }, {
+    "@id" : "rdfs:Resource",
+    "rdf:type" : {
+      "@id" : "rdfs:Class"
+    },
+    "comment" : "The class resource, everything.",
+    "isDefinedBy" : "http://www.w3.org/2000/01/rdf-schema#",
+    "label" : "Resource"
+  }, {
+    "@id" : "rdfs:comment",
+    "@type" : "rdf:Property",
+    "comment" : "A description of the subject resource.",
+    "domain" : "rdfs:Resource",
+    "isDefinedBy" : "http://www.w3.org/2000/01/rdf-schema#",
+    "label" : "comment",
+    "range" : "rdfs:Literal"
+  }, {
+    "@id" : "rdfs:domain",
+    "@type" : "rdf:Property",
+    "comment" : "A domain of the subject property.",
+    "domain" : "rdf:Property",
+    "isDefinedBy" : "http://www.w3.org/2000/01/rdf-schema#",
+    "label" : "domain",
+    "range" : "rdfs:Class"
+  }, {
+    "@id" : "rdfs:isDefinedBy",
+    "@type" : "rdf:Property",
+    "comment" : "The defininition of the subject resource.",
+    "domain" : "rdfs:Resource",
+    "isDefinedBy" : "http://www.w3.org/2000/01/rdf-schema#",
+    "label" : "isDefinedBy",
+    "range" : "rdfs:Resource",
+    "subPropertyOf" : "rdfs:seeAlso"
+  }, {
+    "@id" : "rdfs:label",
+    "@type" : "rdf:Property",
+    "comment" : "A human-readable name for the subject.",
+    "domain" : "rdfs:Resource",
+    "isDefinedBy" : "http://www.w3.org/2000/01/rdf-schema#",
+    "label" : "label",
+    "range" : "rdfs:Literal"
+  }, {
+    "@id" : "rdfs:member",
+    "@type" : "rdf:Property",
+    "comment" : "A member of the subject resource.",
+    "domain" : "rdfs:Resource",
+    "isDefinedBy" : "http://www.w3.org/2000/01/rdf-schema#",
+    "label" : "member",
+    "range" : "rdfs:Resource"
+  }, {
+    "@id" : "rdfs:range",
+    "@type" : "rdf:Property",
+    "comment" : "A range of the subject property.",
+    "domain" : "rdf:Property",
+    "isDefinedBy" : "http://www.w3.org/2000/01/rdf-schema#",
+    "label" : "range",
+    "range" : "rdfs:Class"
+  }, {
+    "@id" : "rdfs:seeAlso",
+    "@type" : "rdf:Property",
+    "comment" : "Further information about the subject resource.",
+    "domain" : "rdfs:Resource",
+    "isDefinedBy" : "http://www.w3.org/2000/01/rdf-schema#",
+    "label" : "seeAlso",
+    "range" : "rdfs:Resource"
+  }, {
+    "@id" : "rdfs:subClassOf",
+    "@type" : "rdf:Property",
+    "comment" : "The subject is a subclass of a class.",
+    "domain" : "rdfs:Class",
+    "isDefinedBy" : "http://www.w3.org/2000/01/rdf-schema#",
+    "label" : "subClassOf",
+    "range" : "rdfs:Class"
+  }, {
+    "@id" : "rdfs:subPropertyOf",
+    "@type" : "rdf:Property",
+    "comment" : "The subject is a subproperty of a property.",
+    "domain" : "rdf:Property",
+    "isDefinedBy" : "http://www.w3.org/2000/01/rdf-schema#",
+    "label" : "subPropertyOf",
+    "range" : "rdf:Property"
+  } ],
+  "@context" : {
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+      "@type" : "@id"
+    },
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+      "@type" : "@id"
+    },
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "dc" : "http://purl.org/dc/elements/1.1/"
+  }
+}
