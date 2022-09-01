@@ -9,9 +9,9 @@ export class VocabularyParser {
   constructor (prefixes: string[], source: any) {
     this.prefixes = prefixes ;
     this.completeItems = this.parseSource(source);
-    for (let i in dct) {
-      console.log(i);
-    }
+    // for (let i in dct) {
+    //   console.log(i);
+    // }
   }
 
   private parseSource(source: any): vscode.CompletionItem[]
