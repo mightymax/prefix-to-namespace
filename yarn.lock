@@ -1584,10 +1584,10 @@
   dependencies:
     "@comunica/actor-rdf-resolve-quad-pattern-rdfjs-source" "^1.21.1"
 
-"@triply/ratt@^3.4.66":
-  version "3.4.66"
-  resolved "https://registry.yarnpkg.com/@triply/ratt/-/ratt-3.4.66.tgz#355712299f09cd48df9f821e1209fc6c9dd48d04"
-  integrity sha512-UQDLih0DKKJ5lubIQUBhkFXw1C/BOIusvWZHnN5A3DnxBb4k3gfGMPBiYa97X3Z7FIXHqARiaTTf4YU/5Qa1Lg==
+"@triply/ratt@^4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@triply/ratt/-/ratt-4.0.6.tgz#48d6779d27218fdf4d68b497fedec18f42b366c1"
+  integrity sha512-84ifB347ZPr+cM6/MC3a2Q1q6KnkgfRoq/1JN1E4HpYEY5cI9s0ysA33SnUP/59UY4RDCPLbg8Sz3I79MByWXg==
   dependencies:
     "@rdfjs/parser-n3" "^1.1.4"
     "@triply/actor-init-sparql-rdfjs" "^1.1.2"

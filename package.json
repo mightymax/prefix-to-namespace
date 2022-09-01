@@ -1,9 +1,11 @@
 {
-  "name": "prefix-to-namespace",
-  "displayName": "prefix-to-namespace",
-  "description": "Get well kown namespaces based on their prefix using data from prefix.cc.",
+  "name": "turtle-autocomplete",
+  "displayName": "turtle-autocomplete",
+  "description": "Visual Studio Code Extension that provides some autocomplete for Turtle and TriG files.",
   "version": "0.0.1",
   "license": "EUPL-1.2",
+  "author": "Mark Lindeman <mark.lindeman@triply.cc> (https://triply.cc)",
+  "publisher": "2vqx6bv46dblp2ga6w6gkn5qmewdco4c7gfv74thv4p5634f2jja",
   "repository": "github:mightymax/prefix-to-namespace",
   "engines": {
     "vscode": "^1.69.0"
@@ -35,7 +37,7 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@triply/ratt": "^3.4.66",
+    "@triply/ratt": "^4.0.6",
     "@types/glob": "^7.2.0",
     "@types/mocha": "^9.1.1",
     "@types/node": "16.x",

@@ -5,6 +5,7 @@ import * as RDF from "./static/22-rdf-syntax-ns.json";
 import * as RDFS from "./static/rdf-schema.json";
 import * as OWL from "./static/owl.json";
 import * as DCTERMS from "./static/dublin_core_terms.json";
+import * as CIDOC from "./static/cidoc-crm.json";
 import * as DC from "./static/dublin_core_elements.json";
 import * as SDO from "./static/schemaorg-current-https.json";
 import * as RICO from "./static/RiC-O_v0-2.json";
@@ -22,15 +23,16 @@ export function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(
 		getPrefixDeclarationCommand(),
-		vscode.languages.registerCompletionItemProvider(documentSelectors, prefix_cc.getCompleteItems(), '@'),
+		vscode.languages.registerCompletionItemProvider(documentSelectors, prefix_cc.getCompleteItems(), ...['@','prefix']),
 		vscode.languages.registerCompletionItemProvider(documentSelectors, (new VocabularyParser(['sdo', 'schema'], SDO)).getCompleteItems(), ':'),
 		vscode.languages.registerCompletionItemProvider(documentSelectors, (new VocabularyParser(['rico'], RICO)).getCompleteItems(), ':'),
 		vscode.languages.registerCompletionItemProvider(documentSelectors, (new VocabularyParser(['rdf'], RDF)).getCompleteItems(), ':'),
 		vscode.languages.registerCompletionItemProvider(documentSelectors, (new VocabularyParser(['rdfs'], RDFS)).getCompleteItems(), ':'),
-		vscode.languages.registerCompletionItemProvider(documentSelectors, (new VocabularyParser(['shacl'], SHACL)).getCompleteItems(), ':'),
+		vscode.languages.registerCompletionItemProvider(documentSelectors, (new VocabularyParser(['sh'], SHACL)).getCompleteItems(), ':'),
 		vscode.languages.registerCompletionItemProvider(documentSelectors, (new VocabularyParser(['owl'], OWL)).getCompleteItems(), ':'),
 		vscode.languages.registerCompletionItemProvider(documentSelectors, (new VocabularyParser(['dc'], DC)).getCompleteItems(), ':'),
-		vscode.languages.registerCompletionItemProvider(documentSelectors, (new VocabularyParser(['dcterms'], DCTERMS)).getCompleteItems(), ':')
+		vscode.languages.registerCompletionItemProvider(documentSelectors, (new VocabularyParser(['dcterms'], DCTERMS)).getCompleteItems(), ':'),
+		vscode.languages.registerCompletionItemProvider(documentSelectors, (new VocabularyParser(['crm', 'http://www.cidoc-crm.org/cidoc-crm/'], CIDOC)).getCompleteItems(), ':')
 	);
 }
 

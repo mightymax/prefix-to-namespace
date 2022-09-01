@@ -31,7 +31,7 @@ export class Prefix
     var self = this;
     return {
       provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
-        if (document.lineAt(position).text !== '@') {
+        if (document.lineAt(position).text !== '@' && document.lineAt(position).text !== 'prefix' ) {
 					return undefined;
 				}
         return self.completeItems;
