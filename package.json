@@ -15,7 +15,7 @@
     "url": "https://github.com/mightymax/prefix-to-namespace"
   },
   "engines": {
-    "vscode": "^1.69.0"
+    "vscode": "^1.80.0"
   },
   "categories": [
     "Snippets"
