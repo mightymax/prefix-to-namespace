@@ -4,6 +4,8 @@ Extension that provides autocomplete for Turtle and TriG files.
 
 ## Features
 
+![Demo](https://raw.githubusercontent.com/mightymax/prefix-to-namespace/main/static/preview.gif)
+
 ### Fetching prefixes and their namespace
 
 - Using the Command Palette (cmd = `prefix.fetch`):
