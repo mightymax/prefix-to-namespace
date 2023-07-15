@@ -2,7 +2,7 @@
   "name": "prefix-to-namespace",
   "displayName": "",
   "description": "Vocabulary and prefix/namespace auto completer for Turtle/TriG files.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "Mark Lindeman",
     "email": "mark.lindeman@triply.cc"
@@ -25,11 +25,11 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
-		"configuration": [
-			{
-				"id": "prefixLookup",
-				"title": "Prefix to Namespace lookup",
-				"properties": {
+    "configuration": [
+      {
+        "id": "prefixLookup",
+        "title": "Prefix to Namespace lookup",
+        "properties": {
           "conf.settingsEditor.prefixLookupMode": {
             "type": "string",
             "order": 1,
@@ -46,9 +46,9 @@
             "description": "Allow selection of multiple prefixes in Command Pallet.",
             "default": true
           }
-				}
-			}
-		],
+        }
+      }
+    ],
     "commands": [
       {
         "command": "prefix.fetch",
