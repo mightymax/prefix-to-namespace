@@ -26,4 +26,4 @@ Extension that provides autocomplete for Turtle and TriG files.
   - [Dublin Core Elements](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/) (`dc:`)
 
 ## Notes
-This extension uses data from [prefix.cc](http://prefix.cc), this extension was not possible without their great work! This extension uses a [static download of their data](http://prefix.cc/popular/all.file.json). I will update this extension once in a while should new prefixes be available. 
+This extension uses data from prefix.cc, this extension was not possible without their great work! 
