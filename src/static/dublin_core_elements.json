@@ -8,7 +8,7 @@
       "@value" : "Dublin Core Metadata Element Set, Version 1.1"
     }
   }, {
-    "@id" : "http://purl.org/dc/elements/1.1/contributor",
+    "@id" : "dc:contributor",
     "@type" : "rdf:Property",
     "description" : {
       "@language" : "en",
@@ -19,7 +19,7 @@
       "@language" : "en",
       "@value" : "An entity responsible for making contributions to the resource."
     },
-    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "isDefinedBy" : "dc:",
     "label" : {
       "@language" : "en",
       "@value" : "Contributor"
@@ -29,7 +29,7 @@
       "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
     }
   }, {
-    "@id" : "http://purl.org/dc/elements/1.1/coverage",
+    "@id" : "dc:coverage",
     "@type" : "rdf:Property",
     "description" : {
       "@language" : "en",
@@ -40,7 +40,7 @@
       "@language" : "en",
       "@value" : "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant."
     },
-    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "isDefinedBy" : "dc:",
     "label" : {
       "@language" : "en",
       "@value" : "Coverage"
@@ -50,7 +50,7 @@
       "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/coverage) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
     }
   }, {
-    "@id" : "http://purl.org/dc/elements/1.1/creator",
+    "@id" : "dc:creator",
     "@type" : "rdf:Property",
     "description" : {
       "@language" : "en",
@@ -61,7 +61,7 @@
       "@language" : "en",
       "@value" : "An entity primarily responsible for making the resource."
     },
-    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "isDefinedBy" : "dc:",
     "label" : {
       "@language" : "en",
       "@value" : "Creator"
@@ -71,7 +71,7 @@
       "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
     }
   }, {
-    "@id" : "http://purl.org/dc/elements/1.1/date",
+    "@id" : "dc:date",
     "@type" : "rdf:Property",
     "description" : {
       "@language" : "en",
@@ -82,7 +82,7 @@
       "@language" : "en",
       "@value" : "A point or period of time associated with an event in the lifecycle of the resource."
     },
-    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "isDefinedBy" : "dc:",
     "label" : {
       "@language" : "en",
       "@value" : "Date"
@@ -92,7 +92,7 @@
       "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/date) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
     }
   }, {
-    "@id" : "http://purl.org/dc/elements/1.1/description",
+    "@id" : "dc:description",
     "@type" : "rdf:Property",
     "description" : {
       "@language" : "en",
@@ -103,7 +103,7 @@
       "@language" : "en",
       "@value" : "An account of the resource."
     },
-    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "isDefinedBy" : "dc:",
     "label" : {
       "@language" : "en",
       "@value" : "Description"
@@ -113,7 +113,7 @@
       "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
     }
   }, {
-    "@id" : "http://purl.org/dc/elements/1.1/format",
+    "@id" : "dc:format",
     "@type" : "rdf:Property",
     "description" : {
       "@language" : "en",
@@ -124,7 +124,7 @@
       "@language" : "en",
       "@value" : "The file format, physical medium, or dimensions of the resource."
     },
-    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "isDefinedBy" : "dc:",
     "label" : {
       "@language" : "en",
       "@value" : "Format"
@@ -134,7 +134,7 @@
       "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/format) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
     }
   }, {
-    "@id" : "http://purl.org/dc/elements/1.1/identifier",
+    "@id" : "dc:identifier",
     "@type" : "rdf:Property",
     "description" : {
       "@language" : "en",
@@ -145,7 +145,7 @@
       "@language" : "en",
       "@value" : "An unambiguous reference to the resource within a given context."
     },
-    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "isDefinedBy" : "dc:",
     "label" : {
       "@language" : "en",
       "@value" : "Identifier"
@@ -155,7 +155,7 @@
       "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
     }
   }, {
-    "@id" : "http://purl.org/dc/elements/1.1/language",
+    "@id" : "dc:language",
     "@type" : "rdf:Property",
     "description" : {
       "@language" : "en",
@@ -166,7 +166,7 @@
       "@language" : "en",
       "@value" : "A language of the resource."
     },
-    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "isDefinedBy" : "dc:",
     "label" : {
       "@language" : "en",
       "@value" : "Language"
@@ -176,7 +176,7 @@
       "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/language) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
     }
   }, {
-    "@id" : "http://purl.org/dc/elements/1.1/publisher",
+    "@id" : "dc:publisher",
     "@type" : "rdf:Property",
     "description" : {
       "@language" : "en",
@@ -187,7 +187,7 @@
       "@language" : "en",
       "@value" : "An entity responsible for making the resource available."
     },
-    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "isDefinedBy" : "dc:",
     "label" : {
       "@language" : "en",
       "@value" : "Publisher"
@@ -197,7 +197,7 @@
       "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
     }
   }, {
-    "@id" : "http://purl.org/dc/elements/1.1/relation",
+    "@id" : "dc:relation",
     "@type" : "rdf:Property",
     "description" : {
       "@language" : "en",
@@ -208,7 +208,7 @@
       "@language" : "en",
       "@value" : "A related resource."
     },
-    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "isDefinedBy" : "dc:",
     "label" : {
       "@language" : "en",
       "@value" : "Relation"
@@ -218,7 +218,7 @@
       "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/relation) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
     }
   }, {
-    "@id" : "http://purl.org/dc/elements/1.1/rights",
+    "@id" : "dc:rights",
     "@type" : "rdf:Property",
     "description" : {
       "@language" : "en",
@@ -229,7 +229,7 @@
       "@language" : "en",
       "@value" : "Information about rights held in and over the resource."
     },
-    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "isDefinedBy" : "dc:",
     "label" : {
       "@language" : "en",
       "@value" : "Rights"
@@ -239,7 +239,7 @@
       "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rights) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
     }
   }, {
-    "@id" : "http://purl.org/dc/elements/1.1/source",
+    "@id" : "dc:source",
     "@type" : "rdf:Property",
     "description" : {
       "@language" : "en",
@@ -250,7 +250,7 @@
       "@language" : "en",
       "@value" : "A related resource from which the described resource is derived."
     },
-    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "isDefinedBy" : "dc:",
     "label" : {
       "@language" : "en",
       "@value" : "Source"
@@ -260,7 +260,7 @@
       "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
     }
   }, {
-    "@id" : "http://purl.org/dc/elements/1.1/subject",
+    "@id" : "dc:subject",
     "@type" : "rdf:Property",
     "description" : {
       "@language" : "en",
@@ -271,7 +271,7 @@
       "@language" : "en",
       "@value" : "The topic of the resource."
     },
-    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "isDefinedBy" : "dc:",
     "label" : {
       "@language" : "en",
       "@value" : "Subject"
@@ -281,14 +281,14 @@
       "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/subject) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
     }
   }, {
-    "@id" : "http://purl.org/dc/elements/1.1/title",
+    "@id" : "dc:title",
     "@type" : "rdf:Property",
     "issued" : "1999-07-02",
     "comment" : {
       "@language" : "en",
       "@value" : "A name given to the resource."
     },
-    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "isDefinedBy" : "dc:",
     "label" : {
       "@language" : "en",
       "@value" : "Title"
@@ -298,7 +298,7 @@
       "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
     }
   }, {
-    "@id" : "http://purl.org/dc/elements/1.1/type",
+    "@id" : "dc:type",
     "@type" : "rdf:Property",
     "description" : {
       "@language" : "en",
@@ -309,7 +309,7 @@
       "@language" : "en",
       "@value" : "The nature or genre of the resource."
     },
-    "isDefinedBy" : "http://purl.org/dc/elements/1.1/",
+    "isDefinedBy" : "dc:",
     "label" : {
       "@language" : "en",
       "@value" : "Type"

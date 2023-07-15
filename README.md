@@ -1,6 +1,6 @@
 # Turtle/TriG autocompleter extension for Visual Studio Code
 
-Extension that provides some autocomplete for Turtle and TriG files.
+Extension that provides autocomplete for Turtle and TriG files.
 
 ## Features
 
